@@ -1,0 +1,51 @@
+Yes 👍 Since your project may use **Streamlit + GitHub**, here is a **professional image section + layout** for both.
+
+---
+
+# 1. Streamlit Image Section + Layout
+
+Use this in your **app.py**
+
+```python id="ptjpp9"
+import streamlit as st
+
+st.set_page_config(page_title="EduChain Verification", layout="wide")
+
+st.title("🎓 EduChain Blockchain Degree Verification System")
+st.markdown("Secure | Fast | Transparent")
+
+# Hero Section
+col1, col2 = st.columns(2)
+
+with col1:
+    st.image("https://images.unsplash.com/photo-1523050854058-8df90110c9f1", use_container_width=True)
+
+with col2:
+    st.subheader("Project Improvements")
+    st.success("✅ Instant Degree Verification")
+    st.success("🔐 Tamper-Proof Certificates")
+    st.success("📄 Paperless Record Sharing")
+    st.success("⚡ Faster than Traditional System")
+    st.success("🤝 Higher Trust")
+
+st.divider()
+
+# Verification Section
+st.subheader("Verify Certificate")
+
+cert_id = st.text_input("Enter Certificate ID")
+
+if st.button("Verify Now"):
+    st.success(f"Certificate {cert_id} Verified Successfully ✅")
+
+st.divider()
+
+# Dashboard
+st.subheader("System Benefits")
+
+a,b,c = st.columns(3)
+
+a.metric("Verification Time", "2 Min", "-5 Days")
+b.metric("Fraud Risk", "Low", "-80%")
+c.metric("Trust Level", "High", "+90%")
+```
